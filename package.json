@@ -1,14 +1,28 @@
 {
   "name": "go-errors",
   "version": "1.0.0",
-  "description": "",
+  "description": "Error helper library",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowmint/go-errors.git"
   },
-  "author": "",
+  "files": [
+    "index.js",
+    "scripts",
+    "src"
+  ],
+  "author": "douglas.linder@gmail.com",
   "license": "MIT",
-  "devDependencies": {
-    "go-assert": "github:shadowmint/go-assert#0.0.1"
+  "bugs": {
+    "url": "https://github.com/shadowmint/go-errors/issues"
+  },
+  "homepage": "https://github.com/shadowmint/go-errors",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "dependencies": {
+    "ncp": "^2.0.0",
+    "mkdirp": "^0.5.1"
   }
 }
