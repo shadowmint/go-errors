@@ -1,0 +1,14 @@
+{
+  "name": "stderr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "go-assert": "github:shadowmint/go-assert#0.0.1"
+  }
+}
