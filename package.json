@@ -1,6 +1,6 @@
 {
   "name": "go-errors",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Error helper library",
   "main": "index.js",
   "repository": {
@@ -22,7 +22,8 @@
     "postinstall": "node scripts/postinstall.js"
   },
   "dependencies": {
-    "ncp": "^2.0.0",
-    "mkdirp": "^0.5.1"
+    "go-assert": "github:shadowmint/go-assert#1.0.0",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0"
   }
 }
