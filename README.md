@@ -2,6 +2,11 @@
 
 A common error wrapper.
 
+## Run tests
+
+    npm install
+    npm test
+
 ## Usage
 
     import "ntoolkit/errors"
