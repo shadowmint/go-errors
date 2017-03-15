@@ -54,6 +54,15 @@ func TestRecover(T *testing.T) {
 		T.Assert(v == 0)
 		T.Assert(err != nil)
 		T.Assert(errors.Is(err, ErrCode2{}))
-		T.Assert(err.Error() == "(errors_test.ErrCode2) Wrapped inner error: interface conversion: interface is string, not int")
+		T.Assert(err.Error() == "(errors_test.ErrCode2) Wrapped inner error: interface conversion: interface {} is string, not int")
+	})
+}
+
+func TestInner(T *testing.T) {
+	assert.Test(T, func(T *assert.T) {
+		err := errors.Fail(ErrCode1{}, errors.Fail(ErrCode2{}, nil, "Inner"), "Output")
+		inner, ok := errors.Inner(err)
+		T.Assert(ok)
+		T.Assert(errors.Is(inner, ErrCode2{}))
 	})
 }

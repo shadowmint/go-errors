@@ -38,3 +38,12 @@ func Is(err error, etype interface{}) bool {
 	}
 	return false
 }
+
+// Inner returns the inner error or err and if there was one
+func Inner(err error) (error, bool) {
+	stderr, ok := err.(Error)
+  if ok {
+    return stderr.Inner, true
+  }
+  return nil, false
+}

@@ -26,3 +26,4 @@ _testmain.go
 # npm
 vendor
 node_modules
+.idea
