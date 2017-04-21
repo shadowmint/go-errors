@@ -47,3 +47,20 @@ func Inner(err error) (error, bool) {
   }
   return nil, false
 }
+
+// ErrData is an error wrapper for an arbitrary data object
+type ErrData struct {
+	Data interface{}
+}
+
+// Error interface
+func (err ErrData) Error() string {
+	return fmt.Sprintf("ErrData: %v", err.Data)
+}
+
+// Data returns a new ErrData error holding the given data only.
+// You can use this as an inner exception; for example:
+// errors.Fail(ErrMyErr{}, errors.Data(dataObject), "Some info")
+func Data(data interface{}) error {
+  return ErrData{Data: data}
+}

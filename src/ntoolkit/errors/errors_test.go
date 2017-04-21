@@ -66,3 +66,11 @@ func TestInner(T *testing.T) {
 		T.Assert(errors.Is(inner, ErrCode2{}))
 	})
 }
+
+func TestErrData(T *testing.T) {
+	assert.Test(T, func(T *assert.T) {
+    err := errors.Fail(ErrCode1{}, errors.Data("Some error specific data"), "Output")
+    output := err.Error()
+    T.Assert(output == "(errors_test.ErrCode1) Output: ErrData: Some error specific data")
+	})
+}

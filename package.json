@@ -1,6 +1,6 @@
 {
   "name": "go-errors",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Error helper library",
   "main": "index.js",
   "repository": {
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/shadowmint/go-errors",
   "scripts": {
-    "test": "GOPATH=`pwd` go test ./src/ntoolkit/...",
+    "test": "GOPATH=`pwd` go test ./src/ntoolkit/... -v",
     "postinstall": "node scripts/postinstall.js"
   },
   "dependencies": {
